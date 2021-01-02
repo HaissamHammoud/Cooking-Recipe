@@ -1,0 +1,31 @@
+﻿@page "/createreceipt"
+
+@using Models
+@inject Data.DataBase.DataContext _context
+@inject Data.Services.ReceiptService _receiptService
+
+<h1>Inserir Receita</h1>
+
+<p>Mostre sua receita para o mundo todo.</p>
+
+<EditForm Model="@receipt" OnValidSubmit ="@ReceiptIn" >
+    <h>Nome da receita</h>
+    <InputText id="Name" @bind-Value="receipt.Name">nome</InputText>
+    <br>
+    <h>Descrição da receita</h>
+    <InputText id="Description" @bind-Value="receipt.Ingredients">Descrição</InputText>
+    <br>
+    <h>passos</h>
+    <InputText id="Steps" @bind-Value="receipt.Steps">passos</InputText>
+    <br><br>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</EditForm>
+@code {
+    private Receipt receipt = new Receipt();
+    private async Task ReceiptIn()
+    {
+        await _receiptService.Create(receipt.Name, 
+        receipt.Steps, 
+        receipt.Ingredients);
+    }
+}

@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using ApplicationCore.Entities;
 
 namespace Models
 {
-    public class Receipt
+    public class Receipt : BaseEntity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

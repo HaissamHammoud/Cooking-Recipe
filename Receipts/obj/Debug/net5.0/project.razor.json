@@ -1,5 +1,5 @@
 {
-  "FilePath": "/workspaces/dotnet/Receipts/Receipts.csproj",
+  "FilePath": "/workspaces/Cooking-Recipe/Receipts/Receipts.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15950,59 +15950,59 @@
   "RootNamespace": "Receipts",
   "Documents": [
     {
-      "FilePath": "/workspaces/dotnet/Receipts/Shared/NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/workspaces/dotnet/Receipts/App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/workspaces/dotnet/Receipts/_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "/workspaces/dotnet/Receipts/Shared/MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/workspaces/dotnet/Receipts/Shared/SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/workspaces/dotnet/Receipts/Pages/Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/workspaces/dotnet/Receipts/Pages/_Host.cshtml",
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Pages/_Host.cshtml",
       "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/workspaces/dotnet/Receipts/Pages/Index.razor",
-      "TargetPath": "Pages\\Index.razor",
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Pages/Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "/workspaces/dotnet/Receipts/Pages/CreateReceipt.razor",
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Shared/SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Shared/NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Shared/MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Pages/FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor",
       "TargetPath": "Pages\\CreateReceipt.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "/workspaces/dotnet/Receipts/Pages/Error.cshtml",
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Pages/Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/workspaces/dotnet/Receipts/Pages/FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Pages/Index.razor",
+      "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
+    },
+    {
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
     }
   ],
   "SerializationFormat": "0.2"

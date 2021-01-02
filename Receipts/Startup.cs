@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Receipts.Data;
 using Receipts.Data.DataBase;
+using Receipts.Data.Repositories;
+using Receipts.Data.Repositories.Interface;
 using Receipts.Data.Services;
 
 namespace Receipts
@@ -35,6 +37,7 @@ namespace Receipts
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddScoped<ReceiptService>();
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(AsyncRepository<>));
             var conrf = Configuration.GetConnectionString("DataContext");
             services.AddDatabaseDeveloperPageExceptionFilter();
         }

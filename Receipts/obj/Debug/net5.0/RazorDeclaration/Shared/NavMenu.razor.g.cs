@@ -13,70 +13,70 @@ namespace Receipts.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 1 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 2 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 3 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 4 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 5 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 6 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 7 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 8 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 9 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Receipts;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "/workspaces/dotnet/Receipts/_Imports.razor"
+#line 10 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Receipts.Shared;
 
 #line default
@@ -90,7 +90,7 @@ using Receipts.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "/workspaces/dotnet/Receipts/Shared/NavMenu.razor"
+#line 33 "/workspaces/Cooking-Recipe/Receipts/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

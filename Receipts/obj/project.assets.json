@@ -6161,11 +6161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/dotnet/Receipts/Receipts.csproj",
+      "projectUniqueName": "/workspaces/Cooking-Recipe/Receipts/Receipts.csproj",
       "projectName": "Receipts",
-      "projectPath": "/workspaces/dotnet/Receipts/Receipts.csproj",
+      "projectPath": "/workspaces/Cooking-Recipe/Receipts/Receipts.csproj",
       "packagesPath": "/home/vscode/.nuget/packages/",
-      "outputPath": "/workspaces/dotnet/Receipts/obj/",
+      "outputPath": "/workspaces/Cooking-Recipe/Receipts/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/vscode/.nuget/NuGet/NuGet.Config"

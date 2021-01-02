@@ -4,7 +4,7 @@ using Models;
 namespace Receipts.Data.DataBase
 {
     
-    public class DataContext : DbContext
+    public class DataContext : DbContext, IUnitOfWork
     {
         public DataContext (DbContextOptions<DataContext> options)
             : base(options)
@@ -16,6 +16,11 @@ namespace Receipts.Data.DataBase
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Receipt>().ToTable("Receipts");
+        }
+
+        public void Save()
+        {
+            base.SaveChanges();
         }
     }
 }

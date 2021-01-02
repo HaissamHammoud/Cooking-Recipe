@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Receipts.Shared
+namespace Receipts.Pages
 {
     #line hidden
     using System;
@@ -82,7 +82,15 @@ using Receipts.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt copy.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/createreceipt")]
+    public partial class CreateReceipt_copy : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,20 +98,21 @@ using Receipts.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "/workspaces/Cooking-Recipe/Receipts/Shared/NavMenu.razor"
+#line 23 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt copy.razor"
        
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    private Receipt receipt = new Receipt();
+    private async Task ReceiptIn()
     {
-        collapseNavMenu = !collapseNavMenu;
+        await _receiptService.Create(receipt.Name, 
+        receipt.Steps, 
+        receipt.Ingredients);
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Services.ReceiptService _receiptService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.DataBase.DataContext _context { get; set; }
     }
 }
 #pragma warning restore 1591

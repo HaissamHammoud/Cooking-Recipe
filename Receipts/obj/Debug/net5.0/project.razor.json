@@ -45,39 +45,6 @@
         }
       },
       {
-        "HashCode": -723060220,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.CreateReceipt",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CreateReceipt"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.CreateReceipt"
-        }
-      },
-      {
-        "HashCode": 1247767639,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.CreateReceipt",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Receipts.Pages.CreateReceipt"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.CreateReceipt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1326204940,
         "Kind": "Components.Component",
         "Name": "Receipts.Pages.FetchData",
@@ -140,6 +107,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Receipts.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1562548868,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.ListRecipies",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ListRecipies"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.ListRecipies"
+        }
+      },
+      {
+        "HashCode": 1959029456,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.ListRecipies",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Receipts.Pages.ListRecipies"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.ListRecipies",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -723060220,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.CreateReceipt",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateReceipt"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.CreateReceipt"
+        }
+      },
+      {
+        "HashCode": 1247767639,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.CreateReceipt",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Receipts.Pages.CreateReceipt"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.CreateReceipt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -15982,6 +16015,11 @@
     {
       "FilePath": "/workspaces/Cooking-Recipe/Receipts/Pages/FetchData.razor",
       "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/workspaces/Cooking-Recipe/Receipts/Pages/ListRecipies.razor",
+      "TargetPath": "Pages\\ListRecipies.razor",
       "FileKind": "component"
     },
     {

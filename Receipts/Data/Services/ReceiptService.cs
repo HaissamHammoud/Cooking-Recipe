@@ -18,7 +18,7 @@ namespace Receipts.Data.Services
             _receiptRepository = receiptRepository;
         }
 
-        public async Task Create(string name, string steps, string ingredients )
+        public async Task Create(string name, List<StepRecipe> steps, List<IngredientRecipe> ingredients )
         {
             var receipt = new Receipt()
             {
@@ -34,7 +34,9 @@ namespace Receipts.Data.Services
         public async Task<List<Receipt>> ListAll()
         {
             var receipts = await _receiptRepository.GetAll();
-            return receipts.ToList();
+            var a = receipts.ToList();
+            var ab = a.Where(x =>x.Steps.Count() != 0);
+            return a;
         }
     }
 }

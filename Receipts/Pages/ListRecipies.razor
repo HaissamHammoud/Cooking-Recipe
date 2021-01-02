@@ -1,0 +1,43 @@
+﻿@page "/listrecipes"
+
+@using Models
+@inject Data.Services.ReceiptService _receiptService
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (receipts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>CreatedDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var receipt in receipts)
+            {
+                <tr>
+                    <td>@receipt.Id</td>
+                    <td>@receipt.Name</td>
+                    <td>@receipt.CreatedDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    private List<Receipt> receipts = new List<Receipt>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        receipts = await _receiptService.ListAll();
+    }
+}

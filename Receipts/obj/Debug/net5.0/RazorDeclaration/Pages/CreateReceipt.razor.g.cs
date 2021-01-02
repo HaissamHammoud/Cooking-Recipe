@@ -98,14 +98,39 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
+#line 53 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
        
     private Receipt receipt = new Receipt();
+    private List<StepRecipe> steps = new List<StepRecipe>();
+    private StepRecipe step = new StepRecipe();
+    private List<IngredientRecipe> ingredients = new List<IngredientRecipe>();
+    private IngredientRecipe ingredient = new IngredientRecipe();
+    private string stepValue;
+    private int stepCount = 0;
+    private bool moreValues = true;
+    const int cMaxNumbers = 10;
+
     private async Task ReceiptIn()
     {
         await _receiptService.Create(receipt.Name, 
-        receipt.Steps, 
-        receipt.Ingredients);
+        steps, 
+        ingredients);
+    }
+
+    private void AddStep()
+    {
+        steps.Add(step);
+    }
+
+    private void AddIngredient()
+    {
+        ingredients.Add(ingredient);
+    }
+
+
+    private void Startstop()
+    {
+        moreValues = !moreValues;
     }
 
 #line default

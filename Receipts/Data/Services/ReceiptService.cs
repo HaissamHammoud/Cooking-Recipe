@@ -26,6 +26,7 @@ namespace Receipts.Data.Services
                 Ingredients = ingredients,
                 Steps = steps
             };
+            
             await _dataContext.Receipts.AddAsync(receipt);
             await _dataContext.SaveChangesAsync();
         }

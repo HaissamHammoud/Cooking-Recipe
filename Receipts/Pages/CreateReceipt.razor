@@ -9,42 +9,50 @@
 <p>Mostre sua receita para o mundo todo.</p>
 
 <EditForm Model="@receipt" OnValidSubmit ="@ReceiptIn" >
-    <h>Nome da receita</h>
+    <div class = "form-group">
+    <label>Nome </label>
     <InputText id="Name" @bind-Value="receipt.Name">nome</InputText>
+    </div>
     <br>
-    <h>Descrição da receita</h>
+    <div class = "form-group">
+    <label>Descrição </label>
     <InputText id="Description" @bind-Value="receipt.Description">Descrição</InputText>
+    </div>
     <br>
     <h2>Ingredientes</h2>
     <br>
     <div class = "form-group">
-        <button type="button" class="btn btn-secondary"
-        @onclick="@(()=>ingredients.Add(new IngredientRecipe()))">+ ingrediente</button>
-    @for(int i = 0 ; i < ingredients.Count(); i++ )
-    {
-        var index = i;
-        var _ingredient = ingredients[i];
+        <div class = "form-group">
+            <button type="button" class="btn btn-secondary"
+            @onclick="@(()=>ingredients.Add(new IngredientRecipe()))">+ ingrediente</button>
+        @for(int i = 0 ; i < ingredients.Count(); i++ )
+        {
+            var index = i;
+            var _ingredient = ingredients[i];
 
-        <p>ingrediente @i: <InputText id="Ingredients@i" @bind-Value="@_ingredient.Ingredient"> Ingredients@i</InputText> 
-        <button type = "button" class="btn btn-danger" @onclick="@(() => ingredients.RemoveAt(index))"
-            >-</button></p>
-    }
-    </div>
-    <br><br>
-    <h2>Passos</h2>
-    <div class = "form-group">
-        <button type="button" class="btn btn-secondary"
-        @onclick="@(()=>steps.Add(new StepRecipe()))">+ passos</button>
-    @for(int j = 0 ; j < steps.Count(); j++ )
-    {
-        var indexP = j;
-        var _step = steps[j];
-        //StepRecipe step =  new StepRecipe();
+            <p>ingrediente : <InputText id="Ingredients@i" @bind-Value="@_ingredient.Ingredient"> Ingredients@i</InputText> 
+            quantidade: <InputText id="quantidade@i" @bind-Value="@_ingredient.Quantity"> Ingredients@i</InputText> 
+            <button type = "button" class="btn btn-danger" @onclick="@(() => ingredients.RemoveAt(index))"
+                >-</button>
+                </p>
+        }
+        </div>
+        <br><br>
+        <h2>Passos</h2>
+        <div class = "form-group">
+            <button type="button" class="btn btn-secondary"
+            @onclick="@(()=>steps.Add(new StepRecipe()))">+ passos</button>
+        @for(int j = 0 ; j < steps.Count(); j++ )
+        {
+            var indexP = j;
+            var _step = steps[j];
+            //StepRecipe step =  new StepRecipe();
 
-        <p>Passo @j: <InputText id="Steps@i" @bind-Value="@_step.Step"> </InputText> 
-        <button type = "button" class="btn btn-danger" @onclick="@(() => steps.RemoveAt(indexP))"
-            >-</button></p>
-    }
+            <p>Passo @j: <InputText id="Steps@i" @bind-Value="@_step.Step"> </InputText> 
+            <button type = "button" class="btn btn-danger" @onclick="@(() => steps.RemoveAt(indexP))"
+                >-</button></p>
+        }
+        </div>
     </div>
     <button type="submit" class="btn btn-primary" >Submit</button>
 </EditForm>

@@ -1,0 +1,31 @@
+﻿@page "/recipe/{id:int}"
+
+@using Models
+@using Microsoft.AspNetCore.Components
+@using System.Linq
+@inject Data.DataBase.DataContext _context
+@inject Data.Services.ReceiptService _receiptService
+@inject Data.Repositories.Interface.IAsyncRepository<Receipt> _receiptRepository
+
+
+<h1>@receipt.Name</h1>
+<h4>Descrição</h4>
+<p>@receipt.Description</p>
+<h4>Ingredientes</h4>
+<p>@receipt.Ingredients</p>
+<h4>Passos</h4>
+<p>@receipt.Steps</p>
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private Receipt receipt = new Receipt();
+    private List<StepRecipe> steps = new List<StepRecipe>();
+    private List<IngredientRecipe> ingredients = new List<IngredientRecipe>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        receipt = await _receiptRepository.FirstOrDefault(x => x.Id ==Id);
+    }
+}

@@ -376,3 +376,5 @@
 /workspaces/Cooking-Recipe/Receipts/obj/Debug/net5.0/Receipts.genruntimeconfig.cache
 /workspaces/Cooking-Recipe/Receipts/obj/Debug/net5.0/RazorDeclaration/Pages/ListRecipies.razor.g.cs
 /workspaces/Cooking-Recipe/Receipts/obj/Debug/net5.0/Razor/Pages/ListRecipies.razor.g.cs
+/workspaces/Cooking-Recipe/Receipts/obj/Debug/net5.0/RazorDeclaration/Pages/ReceiptDetail.razor.g.cs
+/workspaces/Cooking-Recipe/Receipts/obj/Debug/net5.0/Razor/Pages/ReceiptDetail.razor.g.cs

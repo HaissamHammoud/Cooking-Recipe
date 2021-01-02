@@ -9,9 +9,7 @@ namespace Receipts.Pages
     #line hidden
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Components;
 #nullable restore
 #line 1 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using System.Net.Http;
@@ -83,14 +81,28 @@ using Receipts.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
+#line 3 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
 using Models;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/createreceipt")]
-    public partial class CreateReceipt : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 4 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
+using Microsoft.AspNetCore.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
+using System.Linq;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/recipe/{id:int}")]
+    public partial class ReceiptDetail : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,44 +110,23 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 61 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
+#line 20 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
        
+    [Parameter]
+    public int Id { get; set; }
     private Receipt receipt = new Receipt();
     private List<StepRecipe> steps = new List<StepRecipe>();
-    private StepRecipe step = new StepRecipe();
     private List<IngredientRecipe> ingredients = new List<IngredientRecipe>();
-    private IngredientRecipe ingredient = new IngredientRecipe();
-    private string stepValue;
-    private int stepCount = 0;
-    private bool moreValues = true;
-    const int cMaxNumbers = 10;
 
-    private async Task ReceiptIn()
+    protected override async Task OnInitializedAsync()
     {
-        await _receiptService.Create(receipt.Name, 
-        steps, 
-        ingredients);
-    }
-
-    private void AddStep()
-    {
-        steps.Add(step);
-    }
-
-    private void AddIngredient()
-    {
-        ingredients.Add(ingredient);
-    }
-
-
-    private void Startstop()
-    {
-        moreValues = !moreValues;
+        receipt = await _receiptRepository.FirstOrDefault(x => x.Id ==Id);
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Repositories.Interface.IAsyncRepository<Receipt> _receiptRepository { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Services.ReceiptService _receiptService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.DataBase.DataContext _context { get; set; }
     }

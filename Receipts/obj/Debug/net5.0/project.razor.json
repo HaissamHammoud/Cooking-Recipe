@@ -45,39 +45,6 @@
         }
       },
       {
-        "HashCode": 1562548868,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.ListRecipies",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ListRecipies"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.ListRecipies"
-        }
-      },
-      {
-        "HashCode": 1959029456,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.ListRecipies",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Receipts.Pages.ListRecipies"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.ListRecipies",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1640418662,
         "Kind": "Components.Component",
         "Name": "Receipts.Pages.Index",
@@ -193,6 +160,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Receipts.Pages.ReceiptDetail",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1562548868,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.ListRecipies",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ListRecipies"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.ListRecipies"
+        }
+      },
+      {
+        "HashCode": 1959029456,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.ListRecipies",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Receipts.Pages.ListRecipies"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.ListRecipies",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -359,6 +359,39 @@
         }
       },
       {
+        "HashCode": 1047578332,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Shared.NavMenu",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": 135036299,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Shared.NavMenu",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Receipts.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -498266435,
         "Kind": "Components.Component",
         "Name": "Receipts.Shared.SurveyPrompt",
@@ -408,39 +441,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Receipts.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1047578332,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Shared.NavMenu",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 135036299,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Shared.NavMenu",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Receipts.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

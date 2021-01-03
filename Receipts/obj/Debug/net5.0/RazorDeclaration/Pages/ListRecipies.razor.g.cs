@@ -98,7 +98,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/workspaces/Cooking-Recipe/Receipts/Pages/ListRecipies.razor"
+#line 42 "/workspaces/Cooking-Recipe/Receipts/Pages/ListRecipies.razor"
        
     private List<Receipt> receipts = new List<Receipt>();
 
@@ -107,9 +107,16 @@ using Models;
         receipts = await _receiptService.ListAll();
     }
 
+    private async Task DeleteRecipe(Guid id)
+    {
+        await _receiptService.DeleteReceipt(id);
+        NavManager.NavigateTo("/listrecipes");
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Services.ReceiptService _receiptService { get; set; }
     }
 }

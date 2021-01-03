@@ -2,6 +2,7 @@
 
 @using Models
 @inject Data.Services.ReceiptService _receiptService
+@inject NavigationManager NavManager
 
 <h1>Suas Receitas</h1>
 
@@ -17,8 +18,9 @@ else
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-                <th>CreatedDate</th>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +30,10 @@ else
                     <td><a href="/recipe/@receipt.Id">@receipt.Id</a></td>
                     <td>@receipt.Name</td>
                     <td>@receipt.CreatedDate</td>
+                    <td>
+                        <button type = "button" class="btn btn-danger" @onclick="@(() => DeleteRecipe(receipt.Id))">Deletar</button>
+                        <button type = "button" class="btn btn-primary" >editar</button>
+                        </td>
                 </tr>
             }
         </tbody>
@@ -39,5 +45,11 @@ else
     protected override async Task OnInitializedAsync()
     {
         receipts = await _receiptService.ListAll();
+    }
+
+    private async Task DeleteRecipe(Guid id)
+    {
+        await _receiptService.DeleteReceipt(id);
+        NavManager.NavigateTo("/listrecipes");
     }
 }

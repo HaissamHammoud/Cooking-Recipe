@@ -98,7 +98,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 66 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
+#line 87 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
        
     private Receipt receipt = new Receipt();
     private List<StepRecipe> steps = new List<StepRecipe>();

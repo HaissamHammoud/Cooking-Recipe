@@ -32,7 +32,7 @@ namespace Receipts
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(options =>
-                options.UseSqlite("Data Source=blogging.db"));
+                options.UseSqlite("Data Source=receipt.db"));
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();

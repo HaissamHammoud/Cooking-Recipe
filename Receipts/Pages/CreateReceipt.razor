@@ -3,6 +3,7 @@
 @using Models
 @inject Data.DataBase.DataContext _context
 @inject Data.Services.ReceiptService _receiptService
+@inject NavigationManager NavManager
 
 <h1>Inserir Receita</h1>
 
@@ -16,7 +17,11 @@
     <br>
     <div class = "form-group">
     <label>Descrição </label>
-    <InputText id="Description" @bind-Value="receipt.Description">Descrição</InputText>
+        <div class="col-4">
+            <InputText id="Description" @bind-Value="receipt.Description">Descrição</InputText>
+        </div>
+        <label>Imagem </label>
+        <InputText size = "30px"id="Description" @bind-Value="receipt.ImageUrl">imagem</InputText>
     </div>
     <br>
     <h2>Ingredientes</h2>
@@ -31,7 +36,7 @@
             var _ingredient = ingredients[i];
 
             <p>ingrediente : <InputText id="Ingredients@i" @bind-Value="@_ingredient.Ingredient"> Ingredients@i</InputText> 
-            quantidade: <InputText id="quantidade@i" @bind-Value="@_ingredient.Quantity"> Ingredients@i</InputText> 
+            quantidade: <InputText id="quantidade@i" @bind-Value="@_ingredient.Quantity"> quantidade@i</InputText> 
             <button type = "button" class="btn btn-danger" @onclick="@(() => ingredients.RemoveAt(index))"
                 >-</button>
                 </p>
@@ -71,9 +76,12 @@
 
     private async Task ReceiptIn()
     {
-        await _receiptService.Create(receipt.Name, 
+        await _receiptService.Create(receipt.Name,
+        receipt.Description,
         steps, 
-        ingredients);
+        ingredients,
+        receipt.ImageUrl);
+        NavManager.NavigateTo("/createreceipt");
     }
 
     private void AddStep()

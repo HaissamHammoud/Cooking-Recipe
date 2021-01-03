@@ -45,68 +45,35 @@
         }
       },
       {
-        "HashCode": -723060220,
+        "HashCode": 1562548868,
         "Kind": "Components.Component",
-        "Name": "Receipts.Pages.CreateReceipt",
+        "Name": "Receipts.Pages.ListRecipies",
         "AssemblyName": "Receipts",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "CreateReceipt"
+            "TagName": "ListRecipies"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.CreateReceipt"
+          "Common.TypeName": "Receipts.Pages.ListRecipies"
         }
       },
       {
-        "HashCode": 1247767639,
+        "HashCode": 1959029456,
         "Kind": "Components.Component",
-        "Name": "Receipts.Pages.CreateReceipt",
+        "Name": "Receipts.Pages.ListRecipies",
         "AssemblyName": "Receipts",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Receipts.Pages.CreateReceipt"
+            "TagName": "Receipts.Pages.ListRecipies"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.CreateReceipt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1326204940,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.FetchData",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": -1011614168,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.FetchData",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Receipts.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.FetchData",
+          "Common.TypeName": "Receipts.Pages.ListRecipies",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -144,35 +111,35 @@
         }
       },
       {
-        "HashCode": 1562548868,
+        "HashCode": -1326204940,
         "Kind": "Components.Component",
-        "Name": "Receipts.Pages.ListRecipies",
+        "Name": "Receipts.Pages.FetchData",
         "AssemblyName": "Receipts",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ListRecipies"
+            "TagName": "FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.ListRecipies"
+          "Common.TypeName": "Receipts.Pages.FetchData"
         }
       },
       {
-        "HashCode": 1959029456,
+        "HashCode": -1011614168,
         "Kind": "Components.Component",
-        "Name": "Receipts.Pages.ListRecipies",
+        "Name": "Receipts.Pages.FetchData",
         "AssemblyName": "Receipts",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Receipts.Pages.ListRecipies"
+            "TagName": "Receipts.Pages.FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.ListRecipies",
+          "Common.TypeName": "Receipts.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -191,7 +158,7 @@
           {
             "Kind": "Components.Component",
             "Name": "Id",
-            "TypeName": "System.Int32",
+            "TypeName": "System.String",
             "Metadata": {
               "Common.PropertyName": "Id"
             }
@@ -217,7 +184,7 @@
           {
             "Kind": "Components.Component",
             "Name": "Id",
-            "TypeName": "System.Int32",
+            "TypeName": "System.String",
             "Metadata": {
               "Common.PropertyName": "Id"
             }
@@ -226,6 +193,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Receipts.Pages.ReceiptDetail",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -723060220,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.CreateReceipt",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateReceipt"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.CreateReceipt"
+        }
+      },
+      {
+        "HashCode": 1247767639,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.CreateReceipt",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Receipts.Pages.CreateReceipt"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.CreateReceipt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -259,59 +259,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Receipts.App",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -498266435,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Shared.SurveyPrompt",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "HashCode": -529609437,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Shared.SurveyPrompt",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Receipts.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -408,6 +355,59 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "Receipts.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -498266435,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Shared.SurveyPrompt",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "HashCode": -529609437,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Shared.SurveyPrompt",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Receipts.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

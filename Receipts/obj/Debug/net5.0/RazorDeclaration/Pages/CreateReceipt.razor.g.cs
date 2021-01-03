@@ -98,7 +98,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 61 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
+#line 66 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
        
     private Receipt receipt = new Receipt();
     private List<StepRecipe> steps = new List<StepRecipe>();
@@ -112,9 +112,12 @@ using Models;
 
     private async Task ReceiptIn()
     {
-        await _receiptService.Create(receipt.Name, 
+        await _receiptService.Create(receipt.Name,
+        receipt.Description,
         steps, 
-        ingredients);
+        ingredients,
+        receipt.ImageUrl);
+        NavManager.NavigateTo("/createreceipt");
     }
 
     private void AddStep()
@@ -136,6 +139,7 @@ using Models;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Services.ReceiptService _receiptService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.DataBase.DataContext _context { get; set; }
     }

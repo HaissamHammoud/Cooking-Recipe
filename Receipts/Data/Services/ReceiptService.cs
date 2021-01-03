@@ -4,6 +4,7 @@ using Receipts.Data.DataBase;
 using System.Linq;
 using System.Collections.Generic;
 using Receipts.Data.Repositories.Interface;
+using System;
 
 namespace Receipts.Data.Services
 {
@@ -18,14 +19,13 @@ namespace Receipts.Data.Services
             _receiptRepository = receiptRepository;
         }
 
-        public async Task Create(string name, List<StepRecipe> steps, List<IngredientRecipe> ingredients )
+        public async Task Create(string name,
+        string description,
+        List<StepRecipe> steps,
+        List<IngredientRecipe> ingredients,
+        string imageUrl = "" )
         {
-            var receipt = new Receipt()
-            {
-                Name = name,
-                Ingredients = ingredients,
-                Steps = steps
-            };
+            var receipt = new Receipt(ingredients, steps, name, description, imageUrl);
             
             await _dataContext.Receipts.AddAsync(receipt);
             await _dataContext.SaveChangesAsync();
@@ -38,6 +38,12 @@ namespace Receipts.Data.Services
             var a = receipts.ToList();
             var ab = a.Where(x =>x.Steps.Count() != 0);
             return a;
+        }
+
+        public async Task DeleteReceipt(Guid receiptId)
+        {
+            var recipe = await _receiptRepository.FirstOrDefault(x => x.Id == receiptId);
+            await _receiptRepository.Remove(recipe);
         }
     }
 }

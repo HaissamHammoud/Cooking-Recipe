@@ -15,7 +15,19 @@ namespace Receipts.Data.DataBase
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Receipt>().ToTable("Receipts");
+            var receiptModel = modelBuilder.Entity<Receipt>();
+
+            receiptModel.ToTable("Receipts").HasKey(x => x.Id);
+            receiptModel.OwnsMany(x => x.Ingredients, x => 
+            {
+                x.WithOwner().HasForeignKey(y => y.ReceiptId);
+                x.HasKey(x => x.Id);
+            });
+            receiptModel.OwnsMany(x => x.Steps, x => 
+            {
+                x.WithOwner().HasForeignKey(x => x.ReceiptId);
+                x.HasKey(x => x.Id);
+            });
         }
 
         public void Save()

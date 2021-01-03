@@ -90,7 +90,7 @@ using Receipts.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "/workspaces/Cooking-Recipe/Receipts/Shared/NavMenu.razor"
+#line 28 "/workspaces/Cooking-Recipe/Receipts/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

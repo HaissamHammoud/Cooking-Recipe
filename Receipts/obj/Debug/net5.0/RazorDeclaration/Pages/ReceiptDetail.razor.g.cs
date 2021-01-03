@@ -7,7 +7,6 @@
 namespace Receipts.Pages
 {
     #line hidden
-    using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 #nullable restore
@@ -89,19 +88,26 @@ using Models;
 #nullable disable
 #nullable restore
 #line 4 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
-using Microsoft.AspNetCore.Components;
+using System;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 5 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
+using Microsoft.AspNetCore.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
 using System.Linq;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/recipe/{id:int}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/recipe/{id}")]
     public partial class ReceiptDetail : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -110,17 +116,17 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 20 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
+#line 50 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
        
     [Parameter]
-    public int Id { get; set; }
+    public string Id { get; set; }
     private Receipt receipt = new Receipt();
     private List<StepRecipe> steps = new List<StepRecipe>();
     private List<IngredientRecipe> ingredients = new List<IngredientRecipe>();
 
     protected override async Task OnInitializedAsync()
     {
-        receipt = await _receiptRepository.FirstOrDefault(x => x.Id ==Id);
+        receipt = await _receiptRepository.FirstOrDefault(x => x.Id ==Guid.Parse(Id));
     }
 
 #line default

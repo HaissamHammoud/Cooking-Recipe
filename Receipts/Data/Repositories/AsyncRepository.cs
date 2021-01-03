@@ -33,7 +33,7 @@ namespace Receipts.Data.Repositories
 
         public async Task Add(T entity)
         {
-            // await Context.AddAsync(entity);
+            await _context.AddAsync(entity);
             await _context.Set<T>().AddAsync(entity);
             await _context.SaveChangesAsync();
         }
@@ -56,9 +56,9 @@ namespace Receipts.Data.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> predicate)
+        public async Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> predicate, string includeProperties = "" )
         {
-            return await _context.Set<T>().Where(predicate).ToListAsync();
+            return await _context.Set<T>().Where(predicate).Include(includeProperties).ToListAsync();
         }
 
         public Task<int> CountAll() => _context.Set<T>().CountAsync();

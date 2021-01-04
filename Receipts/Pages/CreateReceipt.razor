@@ -61,20 +61,20 @@
         <div class = "form-group">
             <button type="button" class="btn btn-success btn-lg btn-block"
             @onclick="@(()=>steps.Add(new StepRecipe()))">+ passos</button>
+
+        <br>
         @for(int j = 0 ; j < steps.Count(); j++ )
         {
             var indexP = j;
             var _step = steps[j];
             var passoN = "passo " + (j+1).ToString();
             //StepRecipe step =  new StepRecipe();
-            <div class="form-row align-items-center">
-                <div class="col-auto">
-                    <InputText class="form-control mb-2" id="Steps@i" placeholder= "@passoN"
+            <div class="input-group mb-3">
+                    <InputText class="form-control" id="Steps@i" placeholder= "@passoN"
                     @bind-Value="@_step.Step"> </InputText>
-                </div> 
-                <div class="col-auto">
-            <button type = "button" class="btn btn-danger" @onclick="@(() => steps.RemoveAt(indexP))"
-                >-</button>
+                 <div class="input-group-append">
+                    <button type = "button" class="btn btn-danger" 
+                        @onclick="@(() => steps.RemoveAt(indexP))">-</button>
                 </div>
             </div>
         }

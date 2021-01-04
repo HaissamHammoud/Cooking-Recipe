@@ -15,14 +15,18 @@
 <h1>@receipt.Name</h1>
 @if(!string.IsNullOrEmpty(receipt.ImageUrl))
 {
-    <img src=@receipt.ImageUrl alt="Italian Trulli" style="width:500px;">    
+    <div class="text-center">
+        <img src=@receipt.ImageUrl alt="Italian Trulli" class="img-fluid">
+    </div>
 }
 <br><br>
-
-<h4>Descrição</h4>
-<p>@receipt.Description</p>
-<h4>Ingredientes</h4>
-<table class="table">
+<ul class="list-group">
+    <h4 class="list-group-item list-group-item-action active" >Descrição</h4>
+</ul>
+<ul class="list-group">
+<p class="list-group-item list-group-item-action flex-column align-items-start">@receipt.Description</p>
+<h4 class="list-group-item list-group-item-action active">Ingredientes</h4>
+<table class="table table-striped">
     <thead>
         <tr>
             <th>Quantidade</th>
@@ -39,12 +43,17 @@
                 }
             </tbody>
 </table>
+</ul>
 
-<h4>Passos</h4>
-@foreach(var step in receipt.Steps)
-{
-    <p> - @step.Step</p>
-}
+<!--<div class="form-row align-items-center">-->
+    <ul class="list-group">
+        <h4 class="list-group-item list-group-item-action active">Passos</h4>
+        @foreach(var step in receipt.Steps)
+        {   
+            <li class="list-group-item list-group-item-action"><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> @step.Step</li>
+        }
+    </ul>
+<!--</div> -->
 
 
 @code {

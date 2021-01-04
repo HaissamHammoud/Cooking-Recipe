@@ -116,7 +116,7 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
+#line 59 "/workspaces/Cooking-Recipe/Receipts/Pages/ReceiptDetail.razor"
        
     [Parameter]
     public string Id { get; set; }

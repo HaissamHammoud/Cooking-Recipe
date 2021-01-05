@@ -14,10 +14,10 @@
 }
 else
 {
-    <table class="table table-striped">
+    <div class="table-responsive-sm">
+    <table class="table table-striped">     
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nome</th>
                 <th>Data</th>
                 <th>Ações</th>
@@ -26,18 +26,21 @@ else
         <tbody>
             @foreach (var receipt in receipts)
             {
+                var receiptId = receipt.Id;
                 <tr>
-                    <td><a href="/recipe/@receipt.Id">@receipt.Id</a></td>
                     <td>@receipt.Name</td>
                     <td>@receipt.CreatedDate</td>
                     <td>
                         <button type = "button" class="btn btn-danger" @onclick="@(() => DeleteRecipe(receipt.Id))">Deletar</button>
                         <button type = "button" class="btn btn-primary" >editar</button>
-                        </td>
+                        <button type = "button" class="btn btn-success" @onclick="@(() => GoToDetail(receipt.Id))">Visualizar</button>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
+    </div>
+    
 }
 @code {
     private List<Receipt> receipts = new List<Receipt>();
@@ -51,5 +54,10 @@ else
     {
         await _receiptService.DeleteReceipt(id);
         NavManager.NavigateTo("/listrecipes");
+    }
+
+    private async Task GoToDetail(Guid id)
+    {
+        NavManager.NavigateTo($"/recipe/{id}");
     }
 }

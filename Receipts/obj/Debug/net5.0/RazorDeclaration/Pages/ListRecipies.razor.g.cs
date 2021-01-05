@@ -98,7 +98,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "/workspaces/Cooking-Recipe/Receipts/Pages/ListRecipies.razor"
+#line 45 "/workspaces/Cooking-Recipe/Receipts/Pages/ListRecipies.razor"
        
     private List<Receipt> receipts = new List<Receipt>();
 
@@ -111,6 +111,11 @@ using Models;
     {
         await _receiptService.DeleteReceipt(id);
         NavManager.NavigateTo("/listrecipes");
+    }
+
+    private async Task GoToDetail(Guid id)
+    {
+        NavManager.NavigateTo($"/recipe/{id}");
     }
 
 #line default

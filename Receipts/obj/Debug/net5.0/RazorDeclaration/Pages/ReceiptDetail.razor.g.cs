@@ -127,6 +127,7 @@ using System.Linq;
     protected override async Task OnInitializedAsync()
     {
         receipt = await _receiptRepository.FirstOrDefault(x => x.Id ==Guid.Parse(Id));
+        receipt.Steps.OrderBy(x => x.StepNumber);
     }
 
 #line default

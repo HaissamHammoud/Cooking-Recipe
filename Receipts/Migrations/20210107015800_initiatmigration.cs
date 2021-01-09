@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Receipts.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initiatmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,11 +11,12 @@ namespace Receipts.Migrations
                 name: "Receipts",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", nullable: true),
-                    Description = table.Column<string>(type: "TEXT", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    ModifiedDate = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    Description = table.Column<string>(type: "text", nullable: true),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    ModifiedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -26,13 +27,13 @@ namespace Receipts.Migrations
                 name: "IngredientRecipe",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Quantity = table.Column<string>(type: "TEXT", nullable: true),
-                    Ingredient = table.Column<string>(type: "TEXT", nullable: true),
-                    ReceiptId1 = table.Column<Guid>(type: "TEXT", nullable: true),
-                    ReceiptId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    ModifiedDate = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Quantity = table.Column<string>(type: "text", nullable: true),
+                    Ingredient = table.Column<string>(type: "text", nullable: true),
+                    ReceiptId1 = table.Column<Guid>(type: "uuid", nullable: true),
+                    ReceiptId = table.Column<Guid>(type: "uuid", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    ModifiedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -55,12 +56,13 @@ namespace Receipts.Migrations
                 name: "StepRecipe",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Step = table.Column<string>(type: "TEXT", nullable: true),
-                    ReceiptId1 = table.Column<Guid>(type: "TEXT", nullable: true),
-                    ReceiptId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    ModifiedDate = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Step = table.Column<string>(type: "text", nullable: true),
+                    StepNumber = table.Column<int>(type: "integer", nullable: false),
+                    ReceiptId1 = table.Column<Guid>(type: "uuid", nullable: true),
+                    ReceiptId = table.Column<Guid>(type: "uuid", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    ModifiedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {

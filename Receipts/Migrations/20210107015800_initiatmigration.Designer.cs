@@ -4,40 +4,43 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Receipts.Data.DataBase;
 
 namespace Receipts.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210103141614_add-image-url")]
-    partial class addimageurl
+    [Migration("20210107015800_initiatmigration")]
+    partial class initiatmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .UseIdentityByDefaultColumns()
+                .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
             modelBuilder.Entity("Models.Receipt", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Description")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
                     b.Property<string>("ImageUrl")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Name")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -50,25 +53,25 @@ namespace Receipts.Migrations
                         {
                             b1.Property<Guid>("Id")
                                 .ValueGeneratedOnAdd()
-                                .HasColumnType("TEXT");
+                                .HasColumnType("uuid");
 
                             b1.Property<DateTime>("CreatedDate")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("timestamp without time zone");
 
                             b1.Property<string>("Ingredient")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("text");
 
                             b1.Property<DateTime>("ModifiedDate")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("timestamp without time zone");
 
                             b1.Property<string>("Quantity")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("text");
 
                             b1.Property<Guid>("ReceiptId")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("uuid");
 
                             b1.Property<Guid?>("ReceiptId1")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("uuid");
 
                             b1.HasKey("Id");
 
@@ -92,22 +95,25 @@ namespace Receipts.Migrations
                         {
                             b1.Property<Guid>("Id")
                                 .ValueGeneratedOnAdd()
-                                .HasColumnType("TEXT");
+                                .HasColumnType("uuid");
 
                             b1.Property<DateTime>("CreatedDate")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("timestamp without time zone");
 
                             b1.Property<DateTime>("ModifiedDate")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("timestamp without time zone");
 
                             b1.Property<Guid>("ReceiptId")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("uuid");
 
                             b1.Property<Guid?>("ReceiptId1")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("uuid");
 
                             b1.Property<string>("Step")
-                                .HasColumnType("TEXT");
+                                .HasColumnType("text");
+
+                            b1.Property<int>("StepNumber")
+                                .HasColumnType("integer");
 
                             b1.HasKey("Id");
 

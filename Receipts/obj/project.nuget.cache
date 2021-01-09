@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P9OH0Y5nL5dT2nxeTLw6amLNKQ0FEVH4rZK1zycCZl0nCeGNMnGgALX7/cc2J9jtXkbTJierJhW7NwA5G2z/Bw==",
+  "dgSpecHash": "XeaxSq2Ze1bKA+atsbOzSHl7Fi7UMg8Rztu8JuDg8fnPeL4L2s6y+yOXyNdW/qxHko+2zMBgAm5EmFXqlu3kdg==",
   "success": true,
   "projectFilePath": "/workspaces/Cooking-Recipe/Receipts/Receipts.csproj",
   "expectedPackageFiles": [
@@ -62,6 +62,8 @@
     "/home/vscode/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/home/vscode/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "/home/vscode/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/home/vscode/.nuget/packages/npgsql/5.0.1.1/npgsql.5.0.1.1.nupkg.sha512",
+    "/home/vscode/.nuget/packages/npgsql.entityframeworkcore.postgresql/5.0.1/npgsql.entityframeworkcore.postgresql.5.0.1.nupkg.sha512",
     "/home/vscode/.nuget/packages/runtime.native.system/4.3.0/runtime.native.system.4.3.0.nupkg.sha512",
     "/home/vscode/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.4/sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "/home/vscode/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",

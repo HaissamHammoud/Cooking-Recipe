@@ -378,3 +378,5 @@
 /workspaces/Cooking-Recipe/Receipts/obj/Debug/net5.0/ref/Receipts.dll
 /workspaces/Cooking-Recipe/Receipts/obj/Debug/net5.0/Receipts.pdb
 /workspaces/Cooking-Recipe/Receipts/obj/Debug/net5.0/Receipts.genruntimeconfig.cache
+/workspaces/Cooking-Recipe/Receipts/bin/Debug/net5.0/Npgsql.dll
+/workspaces/Cooking-Recipe/Receipts/bin/Debug/net5.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

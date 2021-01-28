@@ -4,85 +4,91 @@
 @inject Data.DataBase.DataContext _context
 @inject Data.Services.ReceiptService _receiptService
 @inject NavigationManager NavManager
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<h1>Inserir Receita</h1>
+@if(Authorized)
+{
+    <h1>Inserir Receita</h1>
 
-<p>Mostre sua receita para o mundo todo.</p>
+    <p>Mostre sua receita para o mundo todo.</p>
 
-<EditForm Model="@receipt" OnValidSubmit ="@ReceiptIn" >
-    <div class = "form-group">
-    <label>Nome </label>
-    <InputText class="form-control" id="Name" @bind-Value="receipt.Name">nome</InputText>
-    </div>
-    <br>
-        <div class="form-group">
-            <label>Descrição </label>
-            <InputTextArea type="text" id="Description" class="form-control"
-            rows="3" @bind-Value="receipt.Description"></InputTextArea>
-        </div>
-        <div class="form-group">
-            <label>Imagem </label>
-            <InputText class="form-control" id="Description" @bind-Value="receipt.ImageUrl">imagem</InputText>
-        </div>
-    <br>
-    <h2>Ingredientes</h2>
-    <br>
-    <div class = "form-group">
+    <EditForm Model="@receipt" OnValidSubmit ="@ReceiptIn" >
         <div class = "form-group">
-            <button type="button" class="btn btn-success btn-lg btn-block"
-            @onclick="@(()=>ingredients.Add(new IngredientRecipe()))">+ ingrediente</button>
-        @for(int i = 0 ; i < ingredients.Count(); i++ )
-        {
-            var index = i;
-            var _ingredient = ingredients[i];
-            <br>
-            <div class="form-row align-items-center">
-                <div class="col-auto">
-                    <label class="sr-only" >quantidade</label>
-                    <InputText class="form-control mb-2" id="quantidade@i" placeholder="Quantidade"
-                    @bind-Value="@_ingredient.Quantity"> quantidade@i</InputText> 
-                </div>
-                <div class="col-auto">
-                    <label class="sr-only" for="Ingredients@i" >ingrediente</label> 
-                    <InputText class="form-control mb-2" id="Ingredients@i" placeholder="Ingrediente"
-                    @bind-Value="@_ingredient.Ingredient"> Ingredients@i</InputText>
-                </div> 
-                <div class="col-auto" >
-                <button type = "button" class="btn btn-danger" @onclick="@(() => ingredients.RemoveAt(index))"
-                >-</button>
-                </div>
-            </div>
-        }
+        <label>Nome </label>
+        <InputText class="form-control" id="Name" @bind-Value="receipt.Name">nome</InputText>
         </div>
-        <br><br>
-        <h2>Passos</h2>
-        <div class = "form-group">
-            <button type="button" class="btn btn-success btn-lg btn-block"
-            @onclick="@(()=>steps.Add(new StepRecipe()))">+ passos</button>
-
         <br>
-        @for(int j = 0 ; j < steps.Count(); j++ )
-        {
-            var indexP = j;
-            var _step = steps[j];
-            var passoN = "passo " + (j+1).ToString();
-            _step.StepNumber = (j+1);
-            //StepRecipe step =  new StepRecipe();
-            <div class="input-group mb-3">
-                    <InputText class="form-control" id="Steps@i" placeholder= "@passoN"
-                    @bind-Value="@_step.Step"> </InputText>
-                 <div class="input-group-append">
-                    <button type = "button" class="btn btn-danger" 
-                        @onclick="@(() => steps.RemoveAt(indexP))">-</button>
-                </div>
+            <div class="form-group">
+                <label>Descrição </label>
+                <InputTextArea type="text" id="Description" class="form-control"
+                rows="3" @bind-Value="receipt.Description"></InputTextArea>
             </div>
-        }
+            <div class="form-group">
+                <label>Imagem </label>
+                <InputText class="form-control" id="Description" @bind-Value="receipt.ImageUrl">imagem</InputText>
+            </div>
+        <br>
+        <h2>Ingredientes</h2>
+        <br>
+        <div class = "form-group">
+            <div class = "form-group">
+                <button type="button" class="btn btn-success btn-lg btn-block"
+                @onclick="@(()=>ingredients.Add(new IngredientRecipe()))">+ ingrediente</button>
+            @for(int i = 0 ; i < ingredients.Count(); i++ )
+            {
+                var index = i;
+                var _ingredient = ingredients[i];
+                <br>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <label class="sr-only" >quantidade</label>
+                        <InputText class="form-control mb-2" id="quantidade@i" placeholder="Quantidade"
+                        @bind-Value="@_ingredient.Quantity"> quantidade@i</InputText> 
+                    </div>
+                    <div class="col-auto">
+                        <label class="sr-only" for="Ingredients@i" >ingrediente</label> 
+                        <InputText class="form-control mb-2" id="Ingredients@i" placeholder="Ingrediente"
+                        @bind-Value="@_ingredient.Ingredient"> Ingredients@i</InputText>
+                    </div> 
+                    <div class="col-auto" >
+                    <button type = "button" class="btn btn-danger" @onclick="@(() => ingredients.RemoveAt(index))"
+                    >-</button>
+                    </div>
+                </div>
+            }
+            </div>
+            <br><br>
+            <h2>Passos</h2>
+            <div class = "form-group">
+                <button type="button" class="btn btn-success btn-lg btn-block"
+                @onclick="@(()=>steps.Add(new StepRecipe()))">+ passos</button>
+
+            <br>
+            @for(int j = 0 ; j < steps.Count(); j++ )
+            {
+                var indexP = j;
+                var _step = steps[j];
+                var passoN = "passo " + (j+1).ToString();
+                _step.StepNumber = (j+1);
+                //StepRecipe step =  new StepRecipe();
+                <div class="input-group mb-3">
+                        <InputText class="form-control" id="Steps@i" placeholder= "@passoN"
+                        @bind-Value="@_step.Step"> </InputText>
+                    <div class="input-group-append">
+                        <button type = "button" class="btn btn-danger" 
+                            @onclick="@(() => steps.RemoveAt(indexP))">-</button>
+                    </div>
+                </div>
+            }
+            </div>
         </div>
-    </div>
-    <button type="submit" class="btn btn-primary" >Submit</button>
-</EditForm>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </EditForm>
+}
 
 
 @code {
@@ -95,7 +101,12 @@
     private int stepCount = 0;
     private bool moreValues = true;
     const int cMaxNumbers = 10;
+    private bool Authorized = false;
 
+    protected override async Task OnInitializedAsync()
+    {
+        await GetClaimsPrincipalData();
+    }
     private async Task ReceiptIn()
     {
         await _receiptService.Create(receipt.Name,
@@ -120,5 +131,21 @@
     private void Startstop()
     {
         moreValues = !moreValues;
+    }
+
+    private async Task GetClaimsPrincipalData()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            Authorized = true;
+        }
+        else
+        {
+            NavManager.NavigateTo("/");
+            Authorized = false;
+        }
     }
 }

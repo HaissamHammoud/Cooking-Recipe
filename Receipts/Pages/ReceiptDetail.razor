@@ -6,7 +6,7 @@
 @using System.Linq
 @inject Data.DataBase.DataContext _context
 @inject Data.Services.ReceiptService _receiptService
-@inject Data.Repositories.Interface.IAsyncRepository<Receipt> _receiptRepository
+@inject Data.Repositories.Interface.IAsyncRepository<Recipe> _receiptRepository
 <style>
     h1 {text-align: center;}
     img {align-self: center;}
@@ -59,7 +59,7 @@
 @code {
     [Parameter]
     public string Id { get; set; }
-    private Receipt receipt = new Receipt();
+    private Recipe receipt = new Recipe();
     private List<StepRecipe> steps = new List<StepRecipe>();
     private List<IngredientRecipe> ingredients = new List<IngredientRecipe>();
 

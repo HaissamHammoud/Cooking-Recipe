@@ -120,7 +120,7 @@ using System.Linq;
        
     [Parameter]
     public string Id { get; set; }
-    private Receipt receipt = new Receipt();
+    private Recipe receipt = new Recipe();
     private List<StepRecipe> steps = new List<StepRecipe>();
     private List<IngredientRecipe> ingredients = new List<IngredientRecipe>();
 
@@ -133,7 +133,7 @@ using System.Linq;
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Repositories.Interface.IAsyncRepository<Receipt> _receiptRepository { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Repositories.Interface.IAsyncRepository<Recipe> _receiptRepository { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Services.ReceiptService _receiptService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.DataBase.DataContext _context { get; set; }
     }

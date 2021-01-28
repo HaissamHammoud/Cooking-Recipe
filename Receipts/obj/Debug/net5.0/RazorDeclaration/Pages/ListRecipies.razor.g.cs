@@ -100,7 +100,7 @@ using Models;
 #nullable restore
 #line 45 "/workspaces/Cooking-Recipe/Receipts/Pages/ListRecipies.razor"
        
-    private List<Receipt> receipts = new List<Receipt>();
+    private List<Recipe> receipts = new List<Recipe>();
 
     protected override async Task OnInitializedAsync()
     {

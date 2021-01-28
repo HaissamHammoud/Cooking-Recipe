@@ -7,8 +7,8 @@ namespace Models
     {
         public string Step { get; set; }
         public int StepNumber { get; set; }
-        public virtual Receipt Receipt { get; set; }
-        public Guid ReceiptId { get; set; }
+        public virtual Recipe Recipe { get; set; }
+        public Guid RecipeId { get; set; }
 
         public StepRecipe()
         {

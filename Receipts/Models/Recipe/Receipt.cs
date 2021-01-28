@@ -4,7 +4,7 @@ using ApplicationCore.Entities;
 
 namespace Models
 {
-    public class Receipt : BaseEntity
+    public class Recipe : BaseEntity
     {
         public string Name{get; set ;}
         public string Description { get; set; }
@@ -12,13 +12,13 @@ namespace Models
         public List<StepRecipe> Steps { get; set; }
         public string ImageUrl { get; set; }
 
-        public Receipt()
+        public Recipe()
         {
             Ingredients = new List<IngredientRecipe>();
             Steps = new List<StepRecipe>();
         }
 
-        public Receipt(List<IngredientRecipe> ingredientsRecipies,
+        public Recipe(List<IngredientRecipe> ingredientsRecipies,
         List<StepRecipe> stepRecipies,
         string name,
         string description,
@@ -43,13 +43,13 @@ namespace Models
 
         public void AddIngredient(IngredientRecipe ingredient)
         {
-            ingredient.Receipt = this;
+            ingredient.Recipe = this;
             Ingredients.Add(ingredient);
         }
 
         public void AddStep(StepRecipe step)
         {
-            step.Receipt = this;
+            step.Recipe = this;
             Steps.Add(step);
         }
     }

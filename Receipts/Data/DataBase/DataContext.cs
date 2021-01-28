@@ -11,11 +11,11 @@ namespace Receipts.Data.DataBase
         {
         }
 
-        public DbSet<Receipt> Receipts { get; set; }
+        public DbSet<Recipe> Receipts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var receiptModel = modelBuilder.Entity<Receipt>();
+            var receiptModel = modelBuilder.Entity<Recipe>();
 
             receiptModel.ToTable("Receipts").HasKey(x => x.Id);
             receiptModel.OwnsMany(x => x.Ingredients, x => 
@@ -25,7 +25,7 @@ namespace Receipts.Data.DataBase
             });
             receiptModel.OwnsMany(x => x.Steps, x => 
             {
-                x.WithOwner().HasForeignKey(x => x.ReceiptId);
+                x.WithOwner().HasForeignKey(x => x.RecipeId);
                 x.HasKey(x => x.Id);
             });
         }

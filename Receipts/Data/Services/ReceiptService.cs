@@ -11,9 +11,9 @@ namespace Receipts.Data.Services
     public class ReceiptService
     {
         private readonly DataContext _dataContext;
-        private readonly IAsyncRepository<Receipt> _receiptRepository;
+        private readonly IAsyncRepository<Recipe> _receiptRepository;
 
-        public ReceiptService(DataContext dataContext, IAsyncRepository<Receipt> receiptRepository)
+        public ReceiptService(DataContext dataContext, IAsyncRepository<Recipe> receiptRepository)
         {
             _dataContext = dataContext;
             _receiptRepository = receiptRepository;
@@ -25,14 +25,14 @@ namespace Receipts.Data.Services
         List<IngredientRecipe> ingredients,
         string imageUrl = "" )
         {
-            var receipt = new Receipt(ingredients, steps, name, description, imageUrl);
+            var receipt = new Recipe(ingredients, steps, name, description, imageUrl);
             
             await _dataContext.Receipts.AddAsync(receipt);
             await _dataContext.SaveChangesAsync();
         }
 
         //TODO: Move this to when repository is done
-        public async Task<List<Receipt>> ListAll()
+        public async Task<List<Recipe>> ListAll()
         {
             var receipts = await _receiptRepository.GetAll();
             var a = receipts.ToList();

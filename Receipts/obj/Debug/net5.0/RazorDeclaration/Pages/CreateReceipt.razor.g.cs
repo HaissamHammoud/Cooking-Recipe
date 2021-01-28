@@ -100,7 +100,7 @@ using Models;
 #nullable restore
 #line 88 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
        
-    private Receipt receipt = new Receipt();
+    private Recipe receipt = new Recipe();
     private List<StepRecipe> steps = new List<StepRecipe>();
     private StepRecipe step = new StepRecipe();
     private List<IngredientRecipe> ingredients = new List<IngredientRecipe>();

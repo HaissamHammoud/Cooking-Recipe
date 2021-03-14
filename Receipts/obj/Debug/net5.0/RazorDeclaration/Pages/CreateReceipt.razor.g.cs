@@ -152,8 +152,9 @@ using Models;
         }
         else
         {
-            NavManager.NavigateTo("/");
-            Authorized = false;
+            Authorized = true;
+            //NavManager.NavigateTo("/");
+
         }
     }
 

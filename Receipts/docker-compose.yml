@@ -1,0 +1,35 @@
+
+version: '3.1'
+
+services:
+
+    postgres:
+        ports:
+          - "5434:5432"
+        image: postgres:latest
+        networks: 
+          - net
+        restart: unless-stopped
+        volumes:
+          - postgres-data:/var/lib/postgresql/data
+        environment:
+          TZ: "America/Sao_Paulo"
+          PGTZ: 'America/Sao_Paulo'
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_PASSWORD: postgres
+
+    cooking:
+      image: haissamfawaz/cooking-recipe-image:latest
+      restart: always
+      networks: 
+        - net
+      ports:
+        - 8080:80
+
+volumes:
+  postgres-data:
+
+networks: 
+  net:
+    driver: bridge

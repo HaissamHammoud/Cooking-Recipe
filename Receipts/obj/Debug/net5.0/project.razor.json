@@ -78,92 +78,6 @@
         }
       },
       {
-        "HashCode": 841103824,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.ReceiptDetail",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ReceiptDetail"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.ReceiptDetail"
-        }
-      },
-      {
-        "HashCode": -1429787876,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.ReceiptDetail",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Receipts.Pages.ReceiptDetail"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.ReceiptDetail",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1562548868,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.ListRecipies",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ListRecipies"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.ListRecipies"
-        }
-      },
-      {
-        "HashCode": 1959029456,
-        "Kind": "Components.Component",
-        "Name": "Receipts.Pages.ListRecipies",
-        "AssemblyName": "Receipts",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Receipts.Pages.ListRecipies"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Pages.ListRecipies",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1640418662,
         "Kind": "Components.Component",
         "Name": "Receipts.Pages.Index",
@@ -230,35 +144,88 @@
         }
       },
       {
-        "HashCode": 1233056249,
+        "HashCode": 1562548868,
         "Kind": "Components.Component",
-        "Name": "Receipts.App",
+        "Name": "Receipts.Pages.ListRecipies",
         "AssemblyName": "Receipts",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "ListRecipies"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.App"
+          "Common.TypeName": "Receipts.Pages.ListRecipies"
         }
       },
       {
-        "HashCode": 2146001415,
+        "HashCode": 1959029456,
         "Kind": "Components.Component",
-        "Name": "Receipts.App",
+        "Name": "Receipts.Pages.ListRecipies",
         "AssemblyName": "Receipts",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Receipts.App"
+            "TagName": "Receipts.Pages.ListRecipies"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.App",
+          "Common.TypeName": "Receipts.Pages.ListRecipies",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 841103824,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.ReceiptDetail",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ReceiptDetail"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.ReceiptDetail"
+        }
+      },
+      {
+        "HashCode": -1429787876,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Pages.ReceiptDetail",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Receipts.Pages.ReceiptDetail"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Pages.ReceiptDetail",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -312,6 +279,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Receipts.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1047578332,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Shared.NavMenu",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": 135036299,
+        "Kind": "Components.Component",
+        "Name": "Receipts.Shared.NavMenu",
+        "AssemblyName": "Receipts",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Receipts.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Receipts.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -412,35 +412,35 @@
         }
       },
       {
-        "HashCode": 1047578332,
+        "HashCode": 1233056249,
         "Kind": "Components.Component",
-        "Name": "Receipts.Shared.NavMenu",
+        "Name": "Receipts.App",
         "AssemblyName": "Receipts",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Shared.NavMenu"
+          "Common.TypeName": "Receipts.App"
         }
       },
       {
-        "HashCode": 135036299,
+        "HashCode": 2146001415,
         "Kind": "Components.Component",
-        "Name": "Receipts.Shared.NavMenu",
+        "Name": "Receipts.App",
         "AssemblyName": "Receipts",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Receipts.Shared.NavMenu"
+            "TagName": "Receipts.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Receipts.Shared.NavMenu",
+          "Common.TypeName": "Receipts.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

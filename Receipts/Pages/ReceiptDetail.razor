@@ -48,7 +48,7 @@
 <!--<div class="form-row align-items-center">-->
     <ul class="list-group">
         <h4 class="list-group-item list-group-item-action active">Passos</h4>
-        @foreach(var step in receipt.Steps)
+        @foreach(var step in receipt.Steps.OrderBy(x => x.StepNumber))
         {   
             <li class="list-group-item list-group-item-action"><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> @step.Step</li>
         }

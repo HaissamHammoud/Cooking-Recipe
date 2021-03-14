@@ -18,12 +18,22 @@ namespace Models
             Steps = new List<StepRecipe>();
         }
 
-        public Recipe(List<IngredientRecipe> ingredientsRecipies,
-        List<StepRecipe> stepRecipies,
-        string name,
-        string description,
-        string imageUrl)
+        public Recipe(
+            List<IngredientRecipe> ingredientsRecipies,
+            List<StepRecipe> stepRecipies,
+            string name,
+            string description,
+            string imageUrl
+        )
         {
+            if(ingredientsRecipies.Count == 0 || stepRecipies.Count == 0)
+            {
+                throw new Exception("No steps and ingredients was given");
+            }
+            if(string.IsNullOrEmpty(name))
+            {
+                throw new Exception("No name was given");
+            }
             Ingredients = new List<IngredientRecipe>();
             Steps = new List<StepRecipe>();
             Id = Guid.NewGuid();

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Receipts.Migrations
 {
-    public partial class initiatmigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +30,7 @@ namespace Receipts.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Quantity = table.Column<string>(type: "text", nullable: true),
                     Ingredient = table.Column<string>(type: "text", nullable: true),
-                    ReceiptId1 = table.Column<Guid>(type: "uuid", nullable: true),
+                    RecipeId = table.Column<Guid>(type: "uuid", nullable: true),
                     ReceiptId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     ModifiedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
@@ -45,8 +45,8 @@ namespace Receipts.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_IngredientRecipe_Receipts_ReceiptId1",
-                        column: x => x.ReceiptId1,
+                        name: "FK_IngredientRecipe_Receipts_RecipeId",
+                        column: x => x.RecipeId,
                         principalTable: "Receipts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -59,8 +59,8 @@ namespace Receipts.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Step = table.Column<string>(type: "text", nullable: true),
                     StepNumber = table.Column<int>(type: "integer", nullable: false),
-                    ReceiptId1 = table.Column<Guid>(type: "uuid", nullable: true),
-                    ReceiptId = table.Column<Guid>(type: "uuid", nullable: false),
+                    RecipeId1 = table.Column<Guid>(type: "uuid", nullable: true),
+                    RecipeId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     ModifiedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
@@ -68,14 +68,14 @@ namespace Receipts.Migrations
                 {
                     table.PrimaryKey("PK_StepRecipe", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_StepRecipe_Receipts_ReceiptId",
-                        column: x => x.ReceiptId,
+                        name: "FK_StepRecipe_Receipts_RecipeId",
+                        column: x => x.RecipeId,
                         principalTable: "Receipts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_StepRecipe_Receipts_ReceiptId1",
-                        column: x => x.ReceiptId1,
+                        name: "FK_StepRecipe_Receipts_RecipeId1",
+                        column: x => x.RecipeId1,
                         principalTable: "Receipts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -87,19 +87,19 @@ namespace Receipts.Migrations
                 column: "ReceiptId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_IngredientRecipe_ReceiptId1",
+                name: "IX_IngredientRecipe_RecipeId",
                 table: "IngredientRecipe",
-                column: "ReceiptId1");
+                column: "RecipeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StepRecipe_ReceiptId",
+                name: "IX_StepRecipe_RecipeId",
                 table: "StepRecipe",
-                column: "ReceiptId");
+                column: "RecipeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StepRecipe_ReceiptId1",
+                name: "IX_StepRecipe_RecipeId1",
                 table: "StepRecipe",
-                column: "ReceiptId1");
+                column: "RecipeId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

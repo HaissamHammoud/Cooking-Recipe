@@ -27,13 +27,6 @@ using Microsoft.AspNetCore.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
-using Microsoft.AspNetCore.Components.Authorization;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 4 "/workspaces/Cooking-Recipe/Receipts/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
@@ -82,6 +75,20 @@ using Receipts.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "/workspaces/Cooking-Recipe/Receipts/Pages/Index.razor"
+using System.Security.Claims;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "/workspaces/Cooking-Recipe/Receipts/Pages/Index.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -90,6 +97,35 @@ using Receipts.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 24 "/workspaces/Cooking-Recipe/Receipts/Pages/Index.razor"
+       
+    private string _authMessage;
+    private string _surnameMessage;
+    private IEnumerable<Claim> _claims = Enumerable.Empty<Claim>();
+
+    private async Task GetClaimsPrincipalData()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            _authMessage = $"{user.Identity.Name} is authenticated.";
+            _claims = user.Claims;
+            _surnameMessage = 
+                $"Surname: {user.FindFirst(c => c.Type == ClaimTypes.Surname)?.Value}";
+        }
+        else
+        {
+            _authMessage = "The user is NOT authenticated.";
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     }
 }
 #pragma warning restore 1591

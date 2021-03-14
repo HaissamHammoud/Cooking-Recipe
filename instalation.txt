@@ -1,0 +1,16 @@
+Para subir a ultima versao dockerhub:
+	-buildar o dockerfile
+	-fazer push da ultima versao para o dockerhub
+Para subir a versao via github:
+	-Subir a ultima versao para master(deploy)
+Para atualizar a ultima versao via dockerhub
+	-rodar o dockercompose com a aplicaçao + banco postgres
+	-rodar alguma migraçao se for necessario
+Para atualizar a ultima versao via github
+	-fazer pull de master
+	-rodar o dockercompose
+
+Para rodar o aplicativo na maquina atravez da imagem gerada pelo dockerfile 
+	docker container run -p 8080:80  cookingrecipe
+
+

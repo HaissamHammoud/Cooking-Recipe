@@ -98,7 +98,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 88 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
+#line 94 "/workspaces/Cooking-Recipe/Receipts/Pages/CreateReceipt.razor"
        
     private Recipe receipt = new Recipe();
     private List<StepRecipe> steps = new List<StepRecipe>();
@@ -109,7 +109,12 @@ using Models;
     private int stepCount = 0;
     private bool moreValues = true;
     const int cMaxNumbers = 10;
+    private bool Authorized = false;
 
+    protected override async Task OnInitializedAsync()
+    {
+        await GetClaimsPrincipalData();
+    }
     private async Task ReceiptIn()
     {
         await _receiptService.Create(receipt.Name,
@@ -136,9 +141,27 @@ using Models;
         moreValues = !moreValues;
     }
 
+    private async Task GetClaimsPrincipalData()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            Authorized = true;
+        }
+        else
+        {
+            Authorized = true;
+            //NavManager.NavigateTo("/");
+
+        }
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.Services.ReceiptService _receiptService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.DataBase.DataContext _context { get; set; }

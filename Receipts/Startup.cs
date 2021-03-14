@@ -33,7 +33,9 @@ namespace Receipts
         {
             var password = Environment.GetEnvironmentVariable("dbpassword");
             services.AddDbContext<DataContext>(options =>
-                options.UseNpgsql($"Host=database-1.cimr2ecakvey.sa-east-1.rds.amazonaws.com;Database=postgres;Username=postgres;Password={password}"));
+                options.UseNpgsql($"Server=postgres;Database=postgres;Uid=postgres;Pwd=postgres;Port=5432"));
+            // services.AddDbContext<DataContext>(options =>
+            //     options.UseSqlite(@"Data Source=C:\recipe.db"));
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();

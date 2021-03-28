@@ -49,7 +49,7 @@ docker-compose up
 ```
 And docker will pull the public the latest image of the app on DockerHub https://hub.docker.com/repository/docker/haissamfawaz/cooking-recipe-image
 
-# Run the script to set up the database.  
+### Run the script to set up the database.  
 
 in this repository we have all scripts for the latest version
 https://github.com/HaissamHammoud/cooking-recipe-database-scripts
@@ -107,7 +107,7 @@ Verify if the service starts correctly with
 docker service ls
 ```
 
-# Run the script to set up the database.  
+### Run the script to set up the database.  
 
 in this repository we have all scripts for the latest version
 https://github.com/HaissamHammoud/cooking-recipe-database-scripts

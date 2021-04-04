@@ -62,7 +62,7 @@ cat ./<script-name>.sql | docker exec -i <container-id> psql -U postgres -d post
 
 And the app will be available on localhost:8080
 
-## With Docker and Swarm
+## With Docker Swarm
 
 First init swarm with
 ```bash
@@ -101,6 +101,13 @@ networks:
   net:
     driver: overlay
 ```
+
+### Run this command to deploy the app
+
+```
+docker stack deploy --compose-file <filename>.yml cookapp
+```
+
 
 Verify if the service starts correctly with
 ```bash

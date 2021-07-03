@@ -32,10 +32,10 @@ namespace Receipts
         public void ConfigureServices(IServiceCollection services)
         {
             var password = Environment.GetEnvironmentVariable("dbpassword");
-            services.AddDbContext<DataContext>(options =>
-                options.UseNpgsql($"Server=postgres;Database=postgres;Uid=postgres;Pwd=postgres;Port=5432"));
             // services.AddDbContext<DataContext>(options =>
-            //     options.UseSqlite(@"Data Source=C:\recipe.db"));
+            //     options.UseNpgsql($"Server=postgres;Database=postgres;Uid=postgres;Pwd=postgres;Port=5432"));
+            services.AddDbContext<DataContext>(options =>
+                options.UseSqlite(@"Data Source=C:\recipe.db"));
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();

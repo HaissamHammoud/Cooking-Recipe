@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: receipts
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: receipts
+    spec:
+      containers:
+      - name: receipts
+        image: adrianstanete/receipts-image:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_URLS
+          value: http://*:80
+  selector:
+    matchLabels:
+      app: receipts
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: receipts
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+  selector:
+    app: receipts

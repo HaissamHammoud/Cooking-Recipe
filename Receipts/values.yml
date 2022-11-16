@@ -12,3 +12,8 @@ primary:
     mountPath: ./dev
     enabled: true
     existingClaim: "postgresql-data-claim"
+
+ingres:
+  enabled: true
+  hostname: /*
+  path: /
